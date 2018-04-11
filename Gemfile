@@ -10,6 +10,8 @@ end
 gem 'rails', '~> 5.1.6'
 # Use Puma as the app server
 gem 'puma', '~> 3.7'
+gem 'devise'
+gem 'milia'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
@@ -55,3 +57,5 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+gem 'activerecord-session_store', github: 'rails/activerecord-session_store'
