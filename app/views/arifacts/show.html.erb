@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @arifact.name %>
+</p>
+
+<p>
+  <strong>Key:</strong>
+  <%= @arifact.key %>
+</p>
+
+<p>
+  <strong>Project:</strong>
+  <%= @arifact.project %>
+</p>
+
+<%= link_to 'Edit', edit_arifact_path(@arifact) %> |
+<%= link_to 'Back', arifacts_path %>

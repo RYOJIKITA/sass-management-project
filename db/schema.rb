@@ -10,7 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180411155045) do
+ActiveRecord::Schema.define(version: 20180412075657) do
+
+  create_table "arifacts", force: :cascade do |t|
+    t.string "name"
+    t.string "key"
+    t.integer "project_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["project_id"], name: "index_arifacts_on_project_id"
+  end
 
   create_table "members", force: :cascade do |t|
     t.integer "tenant_id"
@@ -21,6 +30,15 @@ ActiveRecord::Schema.define(version: 20180411155045) do
     t.datetime "updated_at", null: false
     t.index ["tenant_id"], name: "index_members_on_tenant_id"
     t.index ["user_id"], name: "index_members_on_user_id"
+  end
+
+  create_table "payments", force: :cascade do |t|
+    t.string "email"
+    t.string "token"
+    t.integer "tenant_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["tenant_id"], name: "index_payments_on_tenant_id"
   end
 
   create_table "projects", force: :cascade do |t|
